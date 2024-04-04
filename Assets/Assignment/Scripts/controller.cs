@@ -7,7 +7,8 @@ public class controller : MonoBehaviour
 {
 
     public static Vector2 gravity = new Vector2(0f, 0f);
-    public static GameObject[] boxes = new GameObject[5];
+    public GameObject[] boxes = new GameObject[5];
+    public static GameObject[] staticBoxes = new GameObject[5];
 
     float horizontal;
     float vertical;
@@ -17,6 +18,8 @@ public class controller : MonoBehaviour
     void Start()
     {
         canInput = true;
+        staticBoxes = boxes;
+        reset();
     }
 
     // Update is called once per frame
@@ -48,9 +51,9 @@ public class controller : MonoBehaviour
 
     public static void reset()
     {   
-        for (int i = 0; i < boxes.Length; i++)
+        for (int i = 0; i < staticBoxes.Length; i++)
         {
-            //run scripts for each object
+            staticBoxes[i].GetComponent<Rigidbody2D>().position = staticBoxes[i].GetComponent<box>().defaultPosition;
         }
     }
 }
