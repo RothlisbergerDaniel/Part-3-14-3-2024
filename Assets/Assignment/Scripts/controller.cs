@@ -7,7 +7,7 @@ public class controller : MonoBehaviour
 {
 
     public static Vector2 gravity = new Vector2(0f, 0f);
-    public GameObject[] boxes = new GameObject[5];
+    public static GameObject[] boxes = new GameObject[5];
 
     float horizontal;
     float vertical;
@@ -47,11 +47,8 @@ public class controller : MonoBehaviour
     }
 
     public static void reset()
-    {
-        controller check = new controller();
-        GameObject[] newBoxes = check.boxes; //get a reference to the list of box objects
-        
-        for (int i = 0; i < newBoxes.Length; i++)
+    {   
+        for (int i = 0; i < boxes.Length; i++)
         {
             //run scripts for each object
         }
