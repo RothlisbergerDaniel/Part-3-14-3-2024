@@ -294,7 +294,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14a881a10d66884b905c56f8b4b0034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   gravityForce: 250
+  defaultPosition: {x: -3.75, y: -1.75}
 --- !u!1 &583008032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6503,7 +6505,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14a881a10d66884b905c56f8b4b0034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   gravityForce: 250
+  defaultPosition: {x: 0.75, y: -1.75}
 --- !u!1 &1164212521
 GameObject:
   m_ObjectHideFlags: 0
@@ -6925,7 +6929,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14a881a10d66884b905c56f8b4b0034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   gravityForce: 250
+  defaultPosition: {x: 2.75, y: -4.25}
 --- !u!1 &1577142557
 GameObject:
   m_ObjectHideFlags: 0
@@ -6985,7 +6991,7 @@ GameObject:
   - component: {fileID: 2006797161}
   m_Layer: 0
   m_Name: Goal
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7191,6 +7197,7 @@ GameObject:
   - component: {fileID: 2107284137}
   - component: {fileID: 2107284140}
   - component: {fileID: 2107284139}
+  - component: {fileID: 2107284141}
   m_Layer: 0
   m_Name: Grav Box
   m_TagString: Untagged
@@ -7337,6 +7344,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2107284141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107284136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ba888035f3f364d899e0cb9e1a9ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2107284140}
+  gravityForce: 250
+  defaultPosition: {x: 4.25, y: -0.75}
+  gravDir: {x: 0, y: 5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -41,12 +41,12 @@ public class controller : MonoBehaviour
     IEnumerator doGrav()
     {
         gravity = tempGrav;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         canInput = true;
         gravity = Vector2.zero;
     }
 
-    static void reset()
+    public static void reset()
     {
         controller check = new controller();
         GameObject[] newBoxes = check.boxes; //get a reference to the list of box objects
